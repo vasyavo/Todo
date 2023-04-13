@@ -1,8 +1,4 @@
-import { createParamDecorator, ExecutionContext } from '@nestjs/common';
-import { User } from '@user/user.entity';
-export const GetUser = createParamDecorator(
-  (data, ctx: ExecutionContext): User => {
-    const req = ctx.switchToHttp().getRequest();
-    return req.user;
-  },
-);
+import { SetMetadata } from '@nestjs/common';
+
+export const IS_PUBLIC_KEY = 'isPublic';
+export const Public = () => SetMetadata(IS_PUBLIC_KEY, true);

@@ -1,12 +1,13 @@
-import { IsEmail, IsString } from 'class-validator';
+import { IsString } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
+import { ITokenInfo } from '@user/user.service';
+import { User } from '@user/user.entity';
 
-export class SignInDto {
+export class SignInResponse implements ITokenInfo {
   @ApiProperty()
-  @IsEmail()
-  email: string;
+  user: User;
 
   @ApiProperty()
   @IsString()
-  password: string;
+  accessToken: string;
 }

@@ -16,6 +16,12 @@
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@app/*": ["src/*"],
+      "@auth/*": ["src/auth/*"],
+      "@user/*": ["src/user/*"],
+      "@todo/*": ["src/todo/*"],
+    }
   }
 }
