@@ -1,8 +1,7 @@
 ## Running the app
 
 ```bash
-# development
-$ npm run start
+$ docker-compose up -d --build
 ->> Finaly create database "todo_db"
 ->> And you can play with th API usin Swagger Docs or Postman
 ```
